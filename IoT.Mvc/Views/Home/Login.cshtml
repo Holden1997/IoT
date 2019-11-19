@@ -1,0 +1,107 @@
+<html>
+    <head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Forms - Atlantis Lite Bootstrap 4 Admin Dashboard</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="~/img/icon.ico" type="image/x-icon"/>
+	
+	
+	<script src="~/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Lato:300,400,700,900"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../../assets/css/fonts.min.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="~/css/bootstrap.min.css">
+	<link rel="stylesheet" href="~/css/atlantis.css">
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link rel="stylesheet" href="~/css/demo.css">
+
+       
+    </head>
+    <body class="masthead"
+          style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/bg-masthead.jpg');
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size:cover">
+
+        <div id="AuthBlock" style="position:absolute ;top: 50%;left: 50%;   transform: translate(-50%, -50%);" class="col-md-4">
+            <div class="card">
+                <div class="card-body pb-0">
+                    <div style="text-emphasis-color:#50565d" class="h1 fw-bold float-right ">Sign in</div>
+                    <div class="form-group">
+                        <label for="email2">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                        <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <button id="signIn" class="btn btn-primary btn-border">Sign in</button>
+                    </div>
+                    <div class="form-group">
+                        <a style="text-emphasis-color:#50565d; cursor:pointer"  onclick="showRegistration()" class="h4 fw-bold float-right">Registration</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="RegistrBlock" style="position:absolute ;display:none ; top: 50%;left: 50%;   transform: translate(-50%, -50%);" class="col-md-4">
+            <div class="card">
+                <div class="card-body pb-0">
+                    <div style="text-emphasis-color:#50565d" class="h1 fw-bold float-right ">Registration</div>
+                    <div class="form-group">
+                        <label for="email2">Email Address</label>
+                        <input type="email" class="form-control" id="emailRegistration" placeholder="Enter Email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password2" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="passwordRegistration" placeholder="Password">
+                        <small id="emailHelp2" class="form-text text-muted">Confirm password.</small>
+                    </div>
+                    <div class="form-group">
+                        <button id="registration"  class="btn btn-primary btn-border">Register</button>
+
+                    </div>
+                    <div class="form-group">
+
+                        <a style="text-emphasis-color:#50565d;cursor:pointer" onclick="showAuth()" class="h4 fw-bold float-right">Back to sign in</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showRegistration() {
+
+                document.getElementById('AuthBlock').style.display = "none";
+                document.getElementById('RegistrBlock').style.display = "block";
+            }
+
+            function showAuth() {
+                document.getElementById('AuthBlock').style.display = "block";
+                document.getElementById('RegistrBlock').style.display = "none";
+            }
+        </script>
+
+        <script src="https://code.jquery.com/jquery-1.10.0.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+        <script src="~/js/js.cookie-2.2.1.min.js" type="text/javascript"></script>
+        <script src="~/js/auth/auth.js"></script>
+
+    </body>
+</html>

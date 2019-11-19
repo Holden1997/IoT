@@ -1,0 +1,84 @@
+services:
+  iot.deviceenactor:
+    build:
+      context: C:\Users\Holden\source\repos\IoT
+      dockerfile: ./IoT.DeviceEnactor/Dockerfile
+    depends_on:
+    - iot.mqtt.broker
+    - rabbitmq
+    image: iotdevaceenactor
+  iot.devicelistener:
+    build:
+      context: C:\Users\Holden\source\repos\IoT
+      dockerfile: ./IoT.DeviceListener/Dockerfile
+    depends_on:
+    - iot.mqtt.broker
+    - mongo
+    - rabbitmq
+    image: iotdevacelistener
+  iot.mqtt.broker:
+    build:
+      context: C:\Users\Holden\source\repos\IoT
+      dockerfile: ./IoT.Mqtt.Broker/Dockerfile
+    image: iotmqttbroker
+    ports:
+    - published: 1884
+      target: 1884
+  iot.mvc:
+    build:
+      context: C:\Users\Holden\source\repos\IoT
+      dockerfile: ./IoT.Mvc/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: iotmvc
+    volumes:
+    - C:\Users\Holden\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Holden\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  iot.webapi:
+    build:
+      context: C:\Users\Holden\source\repos\IoT
+      dockerfile: ./IoT.WebApi/Dockerfile
+    depends_on:
+    - rabbitmq
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: iotwebapi
+    volumes:
+    - C:\Users\Holden\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Holden\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  mongo:
+    container_name: mongo
+    environment:
+      MONGO_INITDB_ROOT_PASSWORD: admin
+      MONGO_INITDB_ROOT_USERNAME: root
+    image: mongo
+    ports:
+    - published: 27017
+      target: 27017
+  proxy:
+    build:
+      context: C:\Users\Holden\source\repos\IoT
+      dockerfile: ./Dockerfile
+    image: iotproxy
+    links:
+    - iot.mvc
+    - iot.webapi
+    ports:
+    - published: 5000
+      target: 80
+  rabbitmq:
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_VHOST: /
+    image: rabbitmq:3-management
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - /var/lib/rabbitmq:/var/lib/rabbitmq:rw
+version: '3.4'

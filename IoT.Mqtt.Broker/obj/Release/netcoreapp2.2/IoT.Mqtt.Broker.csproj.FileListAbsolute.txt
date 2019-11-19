@@ -1,0 +1,14 @@
+D:\GitHub\IoT\IoT.Mqtt.Broker\bin\Release\netcoreapp2.2\IoT.Mqtt.Broker.deps.json
+D:\GitHub\IoT\IoT.Mqtt.Broker\bin\Release\netcoreapp2.2\IoT.Mqtt.Broker.runtimeconfig.json
+D:\GitHub\IoT\IoT.Mqtt.Broker\bin\Release\netcoreapp2.2\IoT.Mqtt.Broker.runtimeconfig.dev.json
+D:\GitHub\IoT\IoT.Mqtt.Broker\bin\Release\netcoreapp2.2\IoT.Mqtt.Broker.dll
+D:\GitHub\IoT\IoT.Mqtt.Broker\bin\Release\netcoreapp2.2\IoT.Mqtt.Broker.pdb
+D:\GitHub\IoT\IoT.Mqtt.Broker\obj\Release\netcoreapp2.2\IoT.Mqtt.Broker.csproj.CoreCompileInputs.cache
+D:\GitHub\IoT\IoT.Mqtt.Broker\obj\Release\netcoreapp2.2\IoT.Mqtt.Broker.RazorAssemblyInfo.cache
+D:\GitHub\IoT\IoT.Mqtt.Broker\obj\Release\netcoreapp2.2\IoT.Mqtt.Broker.RazorAssemblyInfo.cs
+D:\GitHub\IoT\IoT.Mqtt.Broker\obj\Release\netcoreapp2.2\IoT.Mqtt.Broker.AssemblyInfoInputs.cache
+D:\GitHub\IoT\IoT.Mqtt.Broker\obj\Release\netcoreapp2.2\IoT.Mqtt.Broker.AssemblyInfo.cs
+D:\GitHub\IoT\IoT.Mqtt.Broker\obj\Release\netcoreapp2.2\IoT.Mqtt.Broker.RazorTargetAssemblyInfo.cache
+D:\GitHub\IoT\IoT.Mqtt.Broker\obj\Release\netcoreapp2.2\IoT.Mqtt.Broker.dll
+D:\GitHub\IoT\IoT.Mqtt.Broker\obj\Release\netcoreapp2.2\IoT.Mqtt.Broker.pdb
+D:\GitHub\IoT\IoT.Mqtt.Broker\obj\Release\netcoreapp2.2\IoT.Mqtt.Broker.csprojAssemblyReference.cache

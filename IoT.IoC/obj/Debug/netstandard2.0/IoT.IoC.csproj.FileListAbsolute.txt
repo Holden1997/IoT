@@ -1,0 +1,17 @@
+D:\GitHub\IoT\IoT.IoC\bin\Debug\netstandard2.0\IoT.IoC.dll.config
+D:\GitHub\IoT\IoT.IoC\bin\Debug\netstandard2.0\IoT.IoC.deps.json
+D:\GitHub\IoT\IoT.IoC\bin\Debug\netstandard2.0\IoT.IoC.dll
+D:\GitHub\IoT\IoT.IoC\bin\Debug\netstandard2.0\IoT.IoC.pdb
+D:\GitHub\IoT\IoT.IoC\bin\Debug\netstandard2.0\IoT.Common.dll
+D:\GitHub\IoT\IoT.IoC\bin\Debug\netstandard2.0\IoT.Domain.dll
+D:\GitHub\IoT\IoT.IoC\bin\Debug\netstandard2.0\IoT.Infrastructure.dll
+D:\GitHub\IoT\IoT.IoC\bin\Debug\netstandard2.0\IoT.Domain.pdb
+D:\GitHub\IoT\IoT.IoC\bin\Debug\netstandard2.0\IoT.Infrastructure.pdb
+D:\GitHub\IoT\IoT.IoC\bin\Debug\netstandard2.0\IoT.Common.pdb
+D:\GitHub\IoT\IoT.IoC\obj\Debug\netstandard2.0\IoT.IoC.csprojAssemblyReference.cache
+D:\GitHub\IoT\IoT.IoC\obj\Debug\netstandard2.0\IoT.IoC.dll.config
+D:\GitHub\IoT\IoT.IoC\obj\Debug\netstandard2.0\IoT.IoC.AssemblyInfoInputs.cache
+D:\GitHub\IoT\IoT.IoC\obj\Debug\netstandard2.0\IoT.IoC.AssemblyInfo.cs
+D:\GitHub\IoT\IoT.IoC\obj\Debug\netstandard2.0\IoT.IoC.csproj.CopyComplete
+D:\GitHub\IoT\IoT.IoC\obj\Debug\netstandard2.0\IoT.IoC.dll
+D:\GitHub\IoT\IoT.IoC\obj\Debug\netstandard2.0\IoT.IoC.pdb

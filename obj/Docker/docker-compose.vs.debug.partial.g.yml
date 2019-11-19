@@ -1,0 +1,121 @@
+version: '3.4'
+
+services:
+  iot.deviceenactor:
+    image: iotdevaceenactor:dev
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "IoT.DeviceEnactor"
+    #environment:
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_iot.deviceenactor$
+    volumes:
+      - C:\Users\Holden\source\repos\IoT\IoT.DeviceEnactor:/app
+      - C:\Users\Holden\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_iot.deviceenactor$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_iot.deviceenactor$ \"bin/Debug/netcoreapp2.2/IoT.DeviceEnactor.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+  iot.devicelistener:
+    image: iotdevacelistener:dev
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "IoT.DeviceListener"
+    #environment:
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_iot.devicelistener$
+    volumes:
+      - C:\Users\Holden\source\repos\IoT\IoT.DeviceListener:/app
+      - C:\Users\Holden\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_iot.devicelistener$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_iot.devicelistener$ \"bin/Debug/netcoreapp2.2/IoT.DeviceListener.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  iot.mqtt.broker:
+    image: iotmqttbroker:dev
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "IoT.Mqtt.Broker"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_iot.mqtt.broker$
+    volumes:
+      - C:\Users\Holden\source\repos\IoT\IoT.Mqtt.Broker:/app
+      - C:\Users\Holden\source\repos\IoT:/src
+      - C:\Users\Holden\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_iot.mqtt.broker$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_iot.mqtt.broker$ \"bin/Debug/netcoreapp2.2/IoT.Mqtt.Broker.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  iot.mvc:
+    image: iotmvc:dev
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "IoT.Mvc"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_iot.mvc$
+    volumes:
+      - C:\Users\Holden\source\repos\IoT\IoT.Mvc:/app
+      - C:\Users\Holden\source\repos\IoT:/src
+      - C:\Users\Holden\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_iot.mvc$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_iot.mvc$ \"bin/Debug/netcoreapp2.2/IoT.Mvc.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  iot.webapi:
+    image: iotwebapi:dev
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "IoT.WebApi"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_iot.webapi$
+    volumes:
+      - C:\Users\Holden\source\repos\IoT\IoT.WebApi:/app
+      - C:\Users\Holden\source\repos\IoT:/src
+      - C:\Users\Holden\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_iot.webapi$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_iot.webapi$ \"bin/Debug/netcoreapp2.2/IoT.WebApi.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

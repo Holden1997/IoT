@@ -1,0 +1,404 @@
+﻿@using React.AspNet;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="~/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: { "families": ["Lato:300,400,700,900"] },
+            custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/css/fonts.min.css'] },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/atlantis.min.css">
+    <link rel="stylesheet" href="~/css/lampt.css" />
+
+    <link rel="stylesheet" href="~/css/demo.css">
+
+</head>
+
+<body data-background-color="dark">
+
+    <div  style="display:none;
+           background-color: white;
+         z-index:9999;
+         width:500px;
+         height:200px;
+        position:absolute; top:35%;left:40%" id="AddSensor" class="card">
+        <div style="background-color:white" class="card-header">
+            <div onclick="ClosePanel();" style="cursor: pointer;" class="h1 fw-bold float-right text-danger">x</div>
+            <h4 style="color:black" class="card-title">Add device</h4>
+        </div>
+
+        <div style="width:460px;position:center ; background-color:white; margin-top:40px; margin-left:20px" class="input-group">
+            <div background-color:white; class="input-group-prepend">
+                <button  id="AddDevaceClick" class="btn btn-default btn-border"   type="button">Add device</button>
+            </div>
+            <input  type="text" style="background-color:white ;color:Background" class="form-control" id="AddDevaceInput" placeholder="6c17df2a-78ec-4df6-8284-40b548763c47"  aria-label="" aria-describedby="basic-addon1">
+        </div>
+
+    </div>
+
+    <div class="wrapper">
+        <div class="main-header">
+            <!-- Logo Header -->
+            <div class="logo-header" data-background-color="dark2">
+
+                <a href="index.html" class="logo">
+                    <img style="height:50px ; Width:100px"  src="~/img/kisspng-logo-internet-of-things-computer-icons-symbol-internet-of-things-icon-5b4fe4190e3932.6418009115319623930583.png" alt="navbar brand" class="navbar-brand">
+                </a>
+                <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="icon-menu"></i>
+                    </span>
+                </button>
+                <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+                <div class="nav-toggle">
+                    <button class="btn btn-toggle toggle-sidebar"><i class="icon-menu"></i></button>
+                </div>
+            </div>
+            <!-- End Logo Header -->
+            <!-- Navbar Header -->
+            <nav class="navbar navbar-header navbar-expand-lg" data-background-color="dark">
+
+                <div class="container-fluid">
+                    <div class="collapse" id="search-nav">
+                        <form class="navbar-left navbar-form nav-search mr-md-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button type="submit" class="btn btn-search pr-1">
+                                        <i class="fa fa-search search-icon"></i>
+                                    </button>
+                                </div>
+                                <input type="text" placeholder="Search ..." class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                        <li class="nav-item toggle-nav-search hidden-caret">
+                            <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown hidden-caret">
+                            <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                            <ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
+                                <li>
+                                    <div class="dropdown-title d-flex justify-content-between align-items-center">
+                                        Messages
+                                        <a href="#" class="small">Mark all as read</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar sidebar-style-2" data-background-color="dark2">
+            <div class="sidebar-wrapper scrollbar scrollbar-inner">
+                <div class="sidebar-content">
+
+                    <ul class="nav nav-primary">
+                        <li class="nav-item active">
+                            <a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+                                <i class="fas fa-home"></i>
+                                <p>Home</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="dashboard">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a  href="~/Account/Index/" >
+                                            <span class="sub-item">Home 1</span>
+                                        </a>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-section">
+                            <span class="sidebar-mini-icon">
+                                <i class="fa fa-ellipsis-h"></i>
+                            </span>
+                            <h4 class="text-section">Devaces</h4>
+                        </li>
+
+
+
+
+                        <li class="nav-item">
+
+                            <div id="maps">
+                                <ul class="nav nav-collapse">
+                                    <li>
+
+                                        <a href="/Account/SupportedDevace">
+                                            <span class="sub-item">Supported device</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Sidebar -->
+
+        <div class="main-panel">
+            <div class="content">
+                <div class="page-inner">
+                    <div class="mt-2 mb-4">
+                        <h5 class="text-white op-7 mb-4">Lists of supported devices and sensors</h5>
+                    </div>
+
+                    <div id="sensorlist" class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body pb-0">
+                                    <div onclick="ShowAddPanel();" style="cursor: pointer;" class="h1 fw-bold float-right text-primary">+</div>
+                                    <h2 class="mb-2">17 ℃ </h2>
+                                    <p class="text-muted">Temperature sensor</p>
+                                    <div class="pull-in sparkline-fix">
+                                        <div id="lineChart"><canvas width="384" height="70" style="display: inline-block; width: 384.925px; height: 70px; vertical-align: top;"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body pb-0">
+                                    <div onclick="ShowAddPanel();" style="cursor: pointer;" class="h1 fw-bold float-right text-danger">+</div>
+                                    <h2 class="mb-2">27</h2>
+                                    <p class="text-muted">Humidity sensor</p>
+                                    <div class="pull-in sparkline-fix">
+                                        <div id="lineChart2"><canvas width="384" height="70" style="display: inline-block; width: 384.925px; height: 70px; vertical-align: top;"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body pb-0">
+                                    <div onclick="ShowAddPanel();" style="cursor: pointer;" class="h1 fw-bold float-right  text-warning">+</div>
+                                    <h2 class="mb-2">213</h2>
+                                    <p class="text-muted">Soil moisture sensor</p>
+                                    <div class="pull-in sparkline-fix">
+                                        <div id="lineChart3"><canvas width="384" height="70" style="display: inline-block; width: 384.925px; height: 70px; vertical-align: top;"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body pb-0">
+                                    <div onclick="ShowAddPanel();" style="cursor: pointer;" class="h1 fw-bold float-right text-primary">+</div>
+                                    <p class="text-muted">Lamp</p>
+                                    <div style="margin-bottom: 1.5em; ">
+                                        <input style="padding: 0.15em;cursor:pointer" class="l" type="checkbox">
+                                    </div>
+                                   
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav class="pull-left">
+                        <ul class="nav">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    @DateTime.UtcNow
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Custom template | don't include it in your project! -->
+    <div class="custom-template">
+        <div class="title">Settings</div>
+        <div class="custom-content">
+            <div class="switcher">
+                <div class="switch-block">
+                    <h4>Logo Header</h4>
+                    <div class="btnSwitch">
+                        <button type="button" class="changeLogoHeaderColor" data-color="dark"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="blue"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="purple"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="light-blue"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="green"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="orange"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="red"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="white"></button>
+                        <br />
+                        <button type="button" class="selected changeLogoHeaderColor" data-color="dark2"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="blue2"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="purple2"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="light-blue2"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="green2"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="orange2"></button>
+                        <button type="button" class="changeLogoHeaderColor" data-color="red2"></button>
+                    </div>
+                </div>
+                <div class="switch-block">
+                    <h4>Navbar Header</h4>
+                    <div class="btnSwitch">
+                        <button type="button" class="selected changeTopBarColor" data-color="dark"></button>
+                        <button type="button" class="changeTopBarColor" data-color="blue"></button>
+                        <button type="button" class="changeTopBarColor" data-color="purple"></button>
+                        <button type="button" class="changeTopBarColor" data-color="light-blue"></button>
+                        <button type="button" class="changeTopBarColor" data-color="green"></button>
+                        <button type="button" class="changeTopBarColor" data-color="orange"></button>
+                        <button type="button" class="changeTopBarColor" data-color="red"></button>
+                        <button type="button" class="changeTopBarColor" data-color="white"></button>
+                        <br />
+                        <button type="button" class="changeTopBarColor" data-color="dark2"></button>
+                        <button type="button" class="changeTopBarColor" data-color="blue2"></button>
+                        <button type="button" class="changeTopBarColor" data-color="purple2"></button>
+                        <button type="button" class="changeTopBarColor" data-color="light-blue2"></button>
+                        <button type="button" class="changeTopBarColor" data-color="green2"></button>
+                        <button type="button" class="changeTopBarColor" data-color="orange2"></button>
+                        <button type="button" class="changeTopBarColor" data-color="red2"></button>
+                    </div>
+                </div>
+                <div class="switch-block">
+                    <h4>Sidebar</h4>
+                    <div class="btnSwitch">
+                        <button type="button" class="changeSideBarColor" data-color="white"></button>
+                        <button type="button" class="changeSideBarColor" data-color="dark"></button>
+                        <button type="button" class="selected changeSideBarColor" data-color="dark2"></button>
+                    </div>
+                </div>
+                <div class="switch-block">
+                    <h4>Background</h4>
+                    <div class="btnSwitch">
+                        <button type="button" class="changeBackgroundColor" data-color="bg2"></button>
+                        <button type="button" class="changeBackgroundColor selected" data-color="bg1"></button>
+                        <button type="button" class="changeBackgroundColor" data-color="bg3"></button>
+                        <button type="button" class="selected changeBackgroundColor" data-color="dark"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-toggle">
+            <i class="flaticon-settings"></i>
+        </div>
+    </div>
+    <!-- End Custom template -->
+    <!--   Core JS Files   -->
+    <script src="~/js/core/jquery.3.2.1.min.js"></script>
+    <script src="~/js/core/popper.min.js"></script>
+    <script src="~/js/core/bootstrap.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="~/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="~/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="~/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+
+    <!-- Chart JS -->
+  @*  <script src="~/js/plugin/chart.js/chart.min.js"></script>*@
+
+    <!-- jQuery Sparkline -->
+    <script src="~/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="~/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+   
+
+    <!-- Bootstrap Notify -->
+   @* <script src="~/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>*@
+
+    <!-- jQuery Vector Maps -->
+    <script src="~/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+   @* <script src="~/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>*@
+
+    <!-- Sweet Alert -->
+   @* <script src="~/js/plugin/sweetalert/sweetalert.min.js"></script>*@
+
+    <!-- Atlantis JS -->
+    <script src="~/js/atlantis.min.js"></script>
+
+    <!-- Atlantis DEMO methods, don't include it in your project! -->
+    <script src="~/js/setting-demo.js"></script>
+    <script src="~/js/demo.js"></script>
+
+    <script type="text/javascript" src="~/js/devace.js"></script>
+
+    <script>
+        $('#lineChart').sparkline([102, 109, 120, 99, 110, 105, 115], {
+            type: 'line',
+            height: '70',
+            width: '100%',
+            lineWidth: '2',
+            lineColor: 'rgba(255, 255, 255, .5)',
+            fillColor: 'rgba(255, 255, 255, .15)'
+        });
+
+        $('#lineChart2').sparkline([99, 125, 122, 105, 110, 124, 115], {
+            type: 'line',
+            height: '70',
+            width: '100%',
+            lineWidth: '2',
+            lineColor: 'rgba(255, 255, 255, .5)',
+            fillColor: 'rgba(255, 255, 255, .15)'
+        });
+
+        $('#lineChart3').sparkline([105, 103, 123, 100, 95, 105, 115], {
+            type: 'line',
+            height: '70',
+            width: '100%',
+            lineWidth: '2',
+            lineColor: 'rgba(255, 255, 255, .5)',
+            fillColor: 'rgba(255, 255, 255, .15)'
+        });
+
+    </script>
+
+
+    <script type="text/javascript">
+
+        function ShowAddPanel() {
+            let id = document.getElementById("AddSensor");
+            if (id.style.display == "none")
+                id.style.display = "block";
+        }
+
+        function ClosePanel() {
+            document.getElementById("AddSensor").style.display = "none";
+
+        }
+
+    </script>
+
+    
+</body>
+
+</html>

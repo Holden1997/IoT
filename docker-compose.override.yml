@@ -1,0 +1,61 @@
+version: '3.4'
+
+services:
+
+  mongo:
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    ports:
+      - "27017:27017"
+
+  iot.mvc:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  iot.webapi:
+     environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+     volumes:
+        - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+        - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+     depends_on:
+        - rabbitmq
+        
+  iot.deviceenactor:
+     depends_on:
+        - rabbitmq
+        - iot.mqtt.broker
+
+  iot.devicelistener:
+     depends_on:
+        - rabbitmq
+        - iot.mqtt.broker
+        - mongo 
+
+  iot.mqtt.broker:
+     ports:
+        - "1884:1884"
+
+  proxy:
+     ports:
+       - "5000:80"
+     links:
+       - iot.mvc
+       - iot.webapi
+       
+  rabbitmq:
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/lib/rabbitmq:/var/lib/rabbitmq
+       

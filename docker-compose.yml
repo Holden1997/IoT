@@ -1,0 +1,48 @@
+version: '3.4'
+
+services:
+  
+  iot.webapi:
+    image: ${DOCKER_REGISTRY-}iotwebapi
+    build:
+      context: .
+      dockerfile: ./IoT.WebApi/Dockerfile
+
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    container_name: rabbitmq
+    
+  mongo:
+    image: ${DOCKER_REGISTRY-}iotmongo
+    container_name: mongo
+    image: mongo
+
+  iot.mqtt.broker:
+    image: ${DOCKER_REGISTRY-}iotmqttbroker
+    build:
+      context: .
+      dockerfile: ./IoT.Mqtt.Broker/Dockerfile
+ 
+  iot.deviceenactor:
+    image: ${DOCKER_REGISTRY-}iotdevaceenactor
+    build:
+      context: .
+      dockerfile: ./IoT.DeviceEnactor/Dockerfile
+
+  iot.devicelistener:
+    image:  ${DOCKER_REGISTRY-}iotdevacelistener
+    build:
+      context: .
+      dockerfile: ./IoT.DeviceListener/Dockerfile
+
+  iot.mvc:
+    image: ${DOCKER_REGISTRY-}iotmvc
+    build:
+      context: .
+      dockerfile: ./IoT.Mvc/Dockerfile
+
+  proxy:
+    image: ${DOCKER_REGISTRY-}iotproxy
+    build:
+      context: .
+      dockerfile: ./Dockerfile

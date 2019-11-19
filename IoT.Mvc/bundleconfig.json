@@ -1,0 +1,171 @@
+[
+  {
+    "outputFileName": "wwwroot/vendor/bootstrap/css/bootstrap.min.min.css",
+    "inputFiles": [
+      "wwwroot/vendor/bootstrap/css/bootstrap.min.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/vendor/fontawesome-free/css/all.min.min.css",
+    "inputFiles": [
+      "wwwroot/vendor/fontawesome-free/css/all.min.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/grayscale.min.min.css",
+    "inputFiles": [
+      "wwwroot/css/grayscale.min.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/vendor/jquery/jquery.min.min.js",
+    "inputFiles": [
+      "wwwroot/vendor/jquery/jquery.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/vendor/bootstrap/js/bootstrap.bundle.min.min.js",
+    "inputFiles": [
+      "wwwroot/vendor/bootstrap/js/bootstrap.bundle.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/vendor/jquery-easing/jquery.easing.min.min.js",
+    "inputFiles": [
+      "wwwroot/vendor/jquery-easing/jquery.easing.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/grayscale.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/grayscale.min.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/js/auth/auth.min.js",
+    "inputFiles": [
+      "wwwroot/js/auth/auth.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/bootstrap.min.min.css",
+    "inputFiles": [
+      "wwwroot/css/bootstrap.min.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/atlantis.min.min.css",
+    "inputFiles": [
+      "wwwroot/css/atlantis.min.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/demo.min.css",
+    "inputFiles": [
+      "wwwroot/css/demo.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/plugin/webfont/webfont.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/plugin/webfont/webfont.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/atlantis.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/atlantis.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/demo.min.js",
+    "inputFiles": [
+      "wwwroot/js/demo.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/setting-demo.min.js",
+    "inputFiles": [
+      "wwwroot/js/setting-demo.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/plugin/bootstrap-notify/bootstrap-notify.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/plugin/bootstrap-notify/bootstrap-notify.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/plugin/chart.js/chart.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/plugin/chart.js/chart.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/plugin/chart-circle/circles.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/plugin/chart-circle/circles.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/plugin/datatables/datatables.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/plugin/datatables/datatables.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/plugin/jquery.sparkline/jquery.sparkline.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/plugin/jquery.sparkline/jquery.sparkline.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/plugin/jquery-scrollbar/jquery.scrollbar.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/plugin/jqvmap/maps/bundle.js",
+    "inputFiles": [
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.algeria.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.argentina.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.brazil.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.canada.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.croatia.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.europe.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.france.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.germany.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.greece.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.indonesia.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.iran.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.iraq.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.new_regions_france.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.russia.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.serbia.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.tunisia.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.turkey.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.ukraine.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.usa.counties.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.usa.districts.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.usa.js",
+      "wwwroot/js/plugin/jqvmap/maps/jquery.vmap.world.js"
+    ]
+  }
+]

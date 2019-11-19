@@ -1,0 +1,2 @@
+﻿2019-11-19 16:38:03.551 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-19 16:38:05.796 INFO  No valid license could be found. Falling back to trial license with start date '2019-11-19'.

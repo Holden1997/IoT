@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "IoT.DevaceListener": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

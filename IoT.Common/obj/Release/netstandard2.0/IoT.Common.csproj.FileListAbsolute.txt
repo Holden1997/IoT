@@ -1,0 +1,9 @@
+D:\GitHub\IoT\IoT.Common\bin\Release\netstandard2.0\IoT.Common.deps.json
+D:\GitHub\IoT\IoT.Common\bin\Release\netstandard2.0\IoT.Common.dll
+D:\GitHub\IoT\IoT.Common\bin\Release\netstandard2.0\IoT.Common.pdb
+D:\GitHub\IoT\IoT.Common\obj\Release\netstandard2.0\IoT.Common.csprojAssemblyReference.cache
+D:\GitHub\IoT\IoT.Common\obj\Release\netstandard2.0\IoT.Common.csproj.CoreCompileInputs.cache
+D:\GitHub\IoT\IoT.Common\obj\Release\netstandard2.0\IoT.Common.AssemblyInfoInputs.cache
+D:\GitHub\IoT\IoT.Common\obj\Release\netstandard2.0\IoT.Common.AssemblyInfo.cs
+D:\GitHub\IoT\IoT.Common\obj\Release\netstandard2.0\IoT.Common.dll
+D:\GitHub\IoT\IoT.Common\obj\Release\netstandard2.0\IoT.Common.pdb

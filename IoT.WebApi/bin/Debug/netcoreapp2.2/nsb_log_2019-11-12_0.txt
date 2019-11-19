@@ -1,0 +1,328 @@
+﻿2019-11-12 15:24:06.958 WARN  RabbitMQ.Client.IConnection 'IoT.WebApi MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-11-12 15:24:07.016 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.WebApi MessagePump' is now in the armed state
+2019-11-12 15:24:13.964 WARN  RabbitMQ.Client.IConnection 'IoT.WebApi-Callback MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-11-12 15:24:14.011 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.WebApi-Callback MessagePump' is now in the armed state
+2019-11-12 15:24:43.269 WARN  RabbitMQ.Client.IConnection 'Publish' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-11-12 15:24:46.831 INFO  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.WebApi MessagePump' is now disarmed
+2019-11-12 15:24:46.917 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Attempting to reconnect in 10 seconds.
+2019-11-12 15:24:47.663 INFO  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.WebApi-Callback MessagePump' is now disarmed
+2019-11-12 15:25:06.125 WARN  RabbitMQ.Client.IConnection 'IoT.WebApi MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-11-12 15:25:08.262 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.WebApi MessagePump' is now in the armed state
+2019-11-12 15:25:11.874 WARN  RabbitMQ.Client.IConnection 'IoT.WebApi-Callback MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-11-12 15:25:15.268 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.WebApi-Callback MessagePump' is now in the armed state
+2019-11-12 15:54:34.044 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-12 15:54:35.120 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-12'.
+
+2019-11-12 16:29:01.069 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-12 16:29:02.286 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-12'.
+
+2019-11-12 17:13:28.831 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-12 17:13:30.818 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-12'.
+
+2019-11-12 17:16:45.391 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-12 17:16:46.315 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-12'.
+
+2019-11-12 17:17:19.153 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.MutateIncomingMessageBehavior.InvokeIncomingMessageMutators(IIncomingLogicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateInstanceMessage\MutateIncomingMessageBehavior.cs:line 60
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 40
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 62
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateTransportMessage\MutateIncomingTransportMessageBehavior.cs:line 59
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:17:24.378 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:17:29.894 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:17:35.021 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:17:39.593 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:17:44.858 WARN  NServiceBus.RecoverabilityExecutor Delayed Retry will reschedule message '64cf95c0-00e8-4a13-a506-ab03011cdcda' after a delay of 00:00:10 because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:18:06.117 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:18:17.374 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:18:27.419 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:18:27.436 WARN  RabbitMQ.Client.IConnection 'IoT.WebApi-Callback MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-11-12 17:18:36.846 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.WebApi-Callback MessagePump' is now in the armed state
+2019-11-12 17:18:40.305 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:18:40.313 WARN  RabbitMQ.Client.IConnection 'IoT.WebApi MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-11-12 17:18:44.948 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.WebApi MessagePump' is now in the armed state
+2019-11-12 17:18:46.430 WARN  RabbitMQ.Client.IConnection 'Publish' connection shutdown: AMQP close-reason, initiated by Library, code=0, text='End of stream', classId=0, methodId=0, cause=System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-11-12 17:18:47.453 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:18:48.494 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Attempting to reconnect in 10 seconds.
+2019-11-12 17:18:52.124 WARN  NServiceBus.RecoverabilityExecutor Delayed Retry will reschedule message '64cf95c0-00e8-4a13-a506-ab03011cdcda' after a delay of 00:00:20 because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:18:54.301 FATAL NServiceBus Failed to execute recoverability policy for message with native ID: `64cf95c0-00e8-4a13-a506-ab03011cdcda`
+RabbitMQ.Client.Exceptions.AlreadyClosedException: Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=0, text='End of stream', classId=0, methodId=0, cause=System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   at RabbitMQ.Client.Framing.Impl.Connection.EnsureIsOpen()
+   at RabbitMQ.Client.Framing.Impl.Connection.CreateModel()
+   at NServiceBus.Transport.RabbitMQ.ConfirmsAwareChannel..ctor(IConnection connection, IRoutingTopology routingTopology, Boolean usePublisherConfirms) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ConfirmsAwareChannel.cs:line 15
+   at NServiceBus.Transport.RabbitMQ.ChannelProvider.GetPublishChannel() in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ChannelProvider.cs:line 66
+   at NServiceBus.Transport.RabbitMQ.MessageDispatcher.Dispatch(TransportOperations outgoingMessages, TransportTransaction transaction, ContextBag context) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Sending\MessageDispatcher.cs:line 18
+   at NServiceBus.DelayedRetryExecutor.Retry(IncomingMessage message, TimeSpan delay, TransportTransaction transportTransaction) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Recoverability\DelayedRetryExecutor.cs:line 51
+   at NServiceBus.RecoverabilityExecutor.DeferMessage(DelayedRetry action, ErrorContext errorContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Recoverability\RecoverabilityExecutor.cs:line 99
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 263
+2019-11-12 17:19:09.329 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Connection to the broker reestablished successfully.
+2019-11-12 17:19:09.390 INFO  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.WebApi MessagePump' is now disarmed
+2019-11-12 17:19:09.392 INFO  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.WebApi-Callback MessagePump' is now disarmed
+2019-11-12 17:19:14.342 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:19:18.671 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:19:23.278 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:19:28.126 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:19:33.118 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:19:37.133 WARN  NServiceBus.RecoverabilityExecutor Delayed Retry will reschedule message '64cf95c0-00e8-4a13-a506-ab03011cdcda' after a delay of 00:00:20 because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:20:03.125 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:20:08.012 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:20:11.979 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:20:16.006 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:20:19.861 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:20:23.876 WARN  NServiceBus.RecoverabilityExecutor Delayed Retry will reschedule message '64cf95c0-00e8-4a13-a506-ab03011cdcda' after a delay of 00:00:30 because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:20:58.032 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:21:02.228 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:21:06.380 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:21:11.221 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:21:15.490 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '64cf95c0-00e8-4a13-a506-ab03011cdcda' because of an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-11-12 17:21:19.613 ERROR NServiceBus.RecoverabilityExecutor Moving message '64cf95c0-00e8-4a13-a506-ab03011cdcda' to the error queue 'error' because processing failed due to an exception:
+System.InvalidOperationException: No handlers could be found for message type: IoT.Common.SharedMessages.Models.DeviceCallback
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 57
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253

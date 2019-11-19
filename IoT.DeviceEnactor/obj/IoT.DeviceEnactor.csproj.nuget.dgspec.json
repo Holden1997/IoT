@@ -1,0 +1,184 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\GitHub\\IoT\\IoT.DeviceEnactor\\IoT.DeviceEnactor.csproj": {}
+  },
+  "projects": {
+    "D:\\GitHub\\IoT\\IoT.Common\\IoT.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\IoT\\IoT.Common\\IoT.Common.csproj",
+        "projectName": "IoT.Common",
+        "projectPath": "D:\\GitHub\\IoT\\IoT.Common\\IoT.Common.csproj",
+        "packagesPath": "C:\\Users\\Holden\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\IoT\\IoT.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Holden\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "MQTTnet.AspNetCore": {
+              "target": "Package",
+              "version": "[3.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.9.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.9.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "NServiceBus": {
+              "target": "Package",
+              "version": "[7.1.10, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GitHub\\IoT\\IoT.DeviceEnactor\\IoT.DeviceEnactor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\IoT\\IoT.DeviceEnactor\\IoT.DeviceEnactor.csproj",
+        "projectName": "IoT.DeviceEnactor",
+        "projectPath": "D:\\GitHub\\IoT\\IoT.DeviceEnactor\\IoT.DeviceEnactor.csproj",
+        "packagesPath": "C:\\Users\\Holden\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\IoT\\IoT.DeviceEnactor\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Holden\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\GitHub\\IoT\\IoT.Common\\IoT.Common.csproj": {
+                "projectPath": "D:\\GitHub\\IoT\\IoT.Common\\IoT.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "NServiceBus": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            },
+            "NServiceBus.Heartbeat": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "NServiceBus.MSDependencyInjection": {
+              "target": "Package",
+              "version": "[0.1.4, )"
+            },
+            "NServiceBus.Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NServiceBus.RabbitMQ": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            },
+            "ServiceControl.Plugin.Nsb6.Heartbeat": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

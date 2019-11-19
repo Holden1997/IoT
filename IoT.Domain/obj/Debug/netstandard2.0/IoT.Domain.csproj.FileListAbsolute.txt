@@ -1,0 +1,15 @@
+D:\GitHub\IoT\IoT.Domain\bin\Debug\netstandard2.0\IoT.Domain.deps.json
+D:\GitHub\IoT\IoT.Domain\bin\Debug\netstandard2.0\IoT.Domain.dll
+D:\GitHub\IoT\IoT.Domain\bin\Debug\netstandard2.0\IoT.Domain.pdb
+D:\GitHub\IoT\IoT.Domain\bin\Debug\netstandard2.0\IoT.Common.dll
+D:\GitHub\IoT\IoT.Domain\bin\Debug\netstandard2.0\IoT.Common.pdb
+D:\GitHub\IoT\IoT.Domain\obj\Debug\netstandard2.0\IoT.Domain.csprojAssemblyReference.cache
+D:\GitHub\IoT\IoT.Domain\obj\Debug\netstandard2.0\IoT.Domain.Properties.Resources.resources
+D:\GitHub\IoT\IoT.Domain\obj\Debug\netstandard2.0\IoT.Domain.csproj.GenerateResource.cache
+D:\GitHub\IoT\IoT.Domain\obj\Debug\netstandard2.0\IoT.Domain.AssemblyInfoInputs.cache
+D:\GitHub\IoT\IoT.Domain\obj\Debug\netstandard2.0\IoT.Domain.AssemblyInfo.cs
+D:\GitHub\IoT\IoT.Domain\obj\Debug\netstandard2.0\IoT.Domain.csproj.CopyComplete
+D:\GitHub\IoT\IoT.Domain\obj\Debug\netstandard2.0\IoT.Domain.dll
+D:\GitHub\IoT\IoT.Domain\obj\Debug\netstandard2.0\IoT.Domain.pdb
+D:\GitHub\IoT\IoT.Domain\bin\Debug\netstandard2.0\IoT.Infrastructure.dll
+D:\GitHub\IoT\IoT.Domain\bin\Debug\netstandard2.0\IoT.Infrastructure.pdb

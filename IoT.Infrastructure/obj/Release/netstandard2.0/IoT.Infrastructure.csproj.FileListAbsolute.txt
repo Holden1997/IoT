@@ -1,0 +1,14 @@
+D:\GitHub\IoT\IoT.Infrastructure\bin\Release\netstandard2.0\IoT.Infrastructure.deps.json
+D:\GitHub\IoT\IoT.Infrastructure\bin\Release\netstandard2.0\IoT.Infrastructure.dll
+D:\GitHub\IoT\IoT.Infrastructure\bin\Release\netstandard2.0\IoT.Infrastructure.pdb
+D:\GitHub\IoT\IoT.Infrastructure\bin\Release\netstandard2.0\IoT.Common.dll
+D:\GitHub\IoT\IoT.Infrastructure\bin\Release\netstandard2.0\IoT.Infrastructure.Interfaces.dll
+D:\GitHub\IoT\IoT.Infrastructure\bin\Release\netstandard2.0\IoT.Infrastructure.Interfaces.pdb
+D:\GitHub\IoT\IoT.Infrastructure\bin\Release\netstandard2.0\IoT.Common.pdb
+D:\GitHub\IoT\IoT.Infrastructure\obj\Release\netstandard2.0\IoT.Infrastructure.csprojAssemblyReference.cache
+D:\GitHub\IoT\IoT.Infrastructure\obj\Release\netstandard2.0\IoT.Infrastructure.csproj.CoreCompileInputs.cache
+D:\GitHub\IoT\IoT.Infrastructure\obj\Release\netstandard2.0\IoT.Infrastructure.AssemblyInfoInputs.cache
+D:\GitHub\IoT\IoT.Infrastructure\obj\Release\netstandard2.0\IoT.Infrastructure.AssemblyInfo.cs
+D:\GitHub\IoT\IoT.Infrastructure\obj\Release\netstandard2.0\IoT.Infrastructure.csproj.CopyComplete
+D:\GitHub\IoT\IoT.Infrastructure\obj\Release\netstandard2.0\IoT.Infrastructure.dll
+D:\GitHub\IoT\IoT.Infrastructure\obj\Release\netstandard2.0\IoT.Infrastructure.pdb

@@ -1,0 +1,13 @@
+D:\GitHub\IoT\IoT.DeviceEnactor\bin\Debug\netcoreapp2.2\IoT.DeviceEnactor.deps.json
+D:\GitHub\IoT\IoT.DeviceEnactor\bin\Debug\netcoreapp2.2\IoT.DeviceEnactor.runtimeconfig.json
+D:\GitHub\IoT\IoT.DeviceEnactor\bin\Debug\netcoreapp2.2\IoT.DeviceEnactor.runtimeconfig.dev.json
+D:\GitHub\IoT\IoT.DeviceEnactor\bin\Debug\netcoreapp2.2\IoT.DeviceEnactor.dll
+D:\GitHub\IoT\IoT.DeviceEnactor\bin\Debug\netcoreapp2.2\IoT.DeviceEnactor.pdb
+D:\GitHub\IoT\IoT.DeviceEnactor\bin\Debug\netcoreapp2.2\IoT.Common.dll
+D:\GitHub\IoT\IoT.DeviceEnactor\bin\Debug\netcoreapp2.2\IoT.Common.pdb
+D:\GitHub\IoT\IoT.DeviceEnactor\obj\Debug\netcoreapp2.2\IoT.DeviceEnactor.csprojAssemblyReference.cache
+D:\GitHub\IoT\IoT.DeviceEnactor\obj\Debug\netcoreapp2.2\IoT.DeviceEnactor.AssemblyInfoInputs.cache
+D:\GitHub\IoT\IoT.DeviceEnactor\obj\Debug\netcoreapp2.2\IoT.DeviceEnactor.AssemblyInfo.cs
+D:\GitHub\IoT\IoT.DeviceEnactor\obj\Debug\netcoreapp2.2\IoT.DeviceEnactor.csproj.CopyComplete
+D:\GitHub\IoT\IoT.DeviceEnactor\obj\Debug\netcoreapp2.2\IoT.DeviceEnactor.dll
+D:\GitHub\IoT\IoT.DeviceEnactor\obj\Debug\netcoreapp2.2\IoT.DeviceEnactor.pdb

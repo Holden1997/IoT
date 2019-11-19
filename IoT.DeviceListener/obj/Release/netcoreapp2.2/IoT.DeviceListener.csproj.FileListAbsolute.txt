@@ -1,0 +1,14 @@
+D:\GitHub\IoT\IoT.DeviceListener\bin\Release\netcoreapp2.2\IoT.DeviceListener.deps.json
+D:\GitHub\IoT\IoT.DeviceListener\bin\Release\netcoreapp2.2\IoT.DeviceListener.runtimeconfig.json
+D:\GitHub\IoT\IoT.DeviceListener\bin\Release\netcoreapp2.2\IoT.DeviceListener.runtimeconfig.dev.json
+D:\GitHub\IoT\IoT.DeviceListener\bin\Release\netcoreapp2.2\IoT.DeviceListener.dll
+D:\GitHub\IoT\IoT.DeviceListener\bin\Release\netcoreapp2.2\IoT.DeviceListener.pdb
+D:\GitHub\IoT\IoT.DeviceListener\bin\Release\netcoreapp2.2\IoT.Common.dll
+D:\GitHub\IoT\IoT.DeviceListener\bin\Release\netcoreapp2.2\IoT.Common.pdb
+D:\GitHub\IoT\IoT.DeviceListener\obj\Release\netcoreapp2.2\IoT.DeviceListener.csprojAssemblyReference.cache
+D:\GitHub\IoT\IoT.DeviceListener\obj\Release\netcoreapp2.2\IoT.DeviceListener.csproj.CoreCompileInputs.cache
+D:\GitHub\IoT\IoT.DeviceListener\obj\Release\netcoreapp2.2\IoT.DeviceListener.AssemblyInfoInputs.cache
+D:\GitHub\IoT\IoT.DeviceListener\obj\Release\netcoreapp2.2\IoT.DeviceListener.AssemblyInfo.cs
+D:\GitHub\IoT\IoT.DeviceListener\obj\Release\netcoreapp2.2\IoT.DeviceListener.csproj.CopyComplete
+D:\GitHub\IoT\IoT.DeviceListener\obj\Release\netcoreapp2.2\IoT.DeviceListener.dll
+D:\GitHub\IoT\IoT.DeviceListener\obj\Release\netcoreapp2.2\IoT.DeviceListener.pdb

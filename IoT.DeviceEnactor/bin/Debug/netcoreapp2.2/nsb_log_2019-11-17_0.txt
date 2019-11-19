@@ -1,0 +1,14 @@
+﻿2019-11-17 16:42:15.352 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-17 16:42:16.413 INFO  No valid license could be found. Falling back to trial license with start date '2019-11-17'.
+2019-11-17 16:44:24.388 WARN  'IoT.DeviceEnactor MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-11-17 16:44:24.389 WARN  'Publish' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-11-17 16:44:24.525 WARN  The circuit breaker for 'IoT.DeviceEnactor MessagePump' is now in the armed state
+2019-11-17 16:44:24.749 INFO  Attempting to reconnect in 10 seconds.
+2019-11-17 16:44:41.507 INFO  Connection to the broker reestablished successfully.
+2019-11-17 16:44:41.538 INFO  The circuit breaker for 'IoT.DeviceEnactor MessagePump' is now disarmed
