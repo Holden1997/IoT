@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using NServiceBus;
 
@@ -24,8 +25,7 @@ namespace IoT.WebApi
         }
 
         public IConfiguration Configuration { get; }
-
-
+       
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -40,8 +40,7 @@ namespace IoT.WebApi
          
             #region NserviceBus
             services.AddNServiceBus("IoT.WebApi", configuration =>
-            {
-              
+            { 
                 configuration.UseSerialization<NewtonsoftSerializer>();
                 configuration.EnableInstallers();
                 configuration.EnableCallbacks();
@@ -85,13 +84,14 @@ namespace IoT.WebApi
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
             else
             {
-               //app.UseHsts();
+               app.UseHsts();
             }
 
             //app.UseForwardedHeaders(new ForwardedHeadersOptions

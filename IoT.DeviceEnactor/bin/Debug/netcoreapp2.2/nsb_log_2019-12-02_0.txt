@@ -1,0 +1,34 @@
+﻿2019-12-02 17:39:01.862 WARN  'Publish' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-02 17:39:01.862 WARN  'IoT.DeviceEnactor MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-02 17:39:03.022 INFO  Attempting to reconnect in 10 seconds.
+2019-12-02 17:39:10.058 WARN  The circuit breaker for 'IoT.DeviceEnactor MessagePump' is now in the armed state
+2019-12-02 17:55:33.985 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 17:55:35.091 INFO  No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+2019-12-02 18:11:32.662 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 18:11:35.027 INFO  No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+2019-12-02 18:18:16.559 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 18:18:41.607 INFO  No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+2019-12-02 18:29:29.020 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 18:29:30.799 INFO  No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+2019-12-02 18:39:37.242 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 18:39:38.376 INFO  No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+2019-12-02 20:00:55.281 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 20:00:56.427 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-02'.
+2019-12-02 20:26:22.539 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 20:26:24.569 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-02'.
+2019-12-02 20:54:29.271 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 20:54:30.469 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-02'.
+2019-12-02 20:59:58.922 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 21:00:00.809 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-02'.
+2019-12-02 21:03:59.732 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 21:04:00.873 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-02'.
+2019-12-02 21:06:36.633 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 21:06:37.820 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-02'.
+2019-12-02 21:10:16.994 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-02 21:10:19.247 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-02'.

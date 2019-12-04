@@ -16,14 +16,14 @@ namespace IoT.DevaceListener.Modules
         {
 
             var config = new ServerConfig();
-            configuration.Bind(config.MongoDB);
+            // configuration.Bind(config.MongoDB);
+            //var x = configuration["MongoDB:DatabaseName"];
 
-
-            config.MongoDB.Host = "mongo";
-            config.MongoDB.Port = 27017;
-            config.MongoDB.User = "root";
-            config.MongoDB.Password = "admin";
-            config.MongoDB.DatabaseName = "IoTDeviceDataBase";
+            config.MongoDB.Host = configuration["MongoDB:Host"];
+            config.MongoDB.Port = int.Parse(configuration["MongoDB:Port"]);
+            config.MongoDB.User = configuration["MongoDB:User"];
+            config.MongoDB.Password = configuration["MongoDB:Password"];
+            config.MongoDB.DatabaseName = configuration["MongoDB:DatabaseName"];
 
 
             services.AddSingleton<IDevicesStoreDatabaseConfiguration, DevicesStoreDatabaseConfiguration>();

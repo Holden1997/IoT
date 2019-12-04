@@ -6,16 +6,17 @@ using IoT.DevaceListener.Iterfaces;
 
 using IoT.DevaceListener.Modules;
 using IoT.DevaceListener.NServiceBus;
-
+using IoT.DeviceListener.Interfaces;
+using IoT.DeviceListener.Modules;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NServiceBus;
 
-using System;
 using System.IO;
 using System.Threading.Tasks;
+
 
 namespace IoT.DevaceListener
 {
@@ -24,59 +25,38 @@ namespace IoT.DevaceListener
 
         static async Task Main(string[] args)
         {
+            var builtConfig = new ConfigurationBuilder()
+             .AddJsonFile("appsettings.json")
+             .AddCommandLine(args)
+             .Build();
 
             IHost host = new HostBuilder()
-               .ConfigureHostConfiguration(hostConfiguration =>{
+               .ConfigureHostConfiguration(hostConfiguration =>
+               {
                    hostConfiguration.SetBasePath(Directory.GetCurrentDirectory());
                })
                 .ConfigureAppConfiguration((hostContext, hostConfiguration) =>
                 {
-                    hostConfiguration.AddJsonFile("appsettings.json", optional: true);
+                    hostConfiguration.AddConfiguration(builtConfig);
                 })
+                 .ConfigureLogging(configureLogging =>
+                 {
+                     configureLogging.ClearProviders();
+                     configureLogging.AddConsole();
+                     configureLogging.AddDebug();
+                     configureLogging.SetMinimumLevel(LogLevel.Trace);
+                 })
                 .ConfigureServices((hostContext, services) =>
                 {
                     Register<InfastructureModule>(services, hostContext.Configuration);
-                    var provider = services.BuildServiceProvider();
-                    var repositoryService = provider.GetService<IRepository<Device>>();
-
+                    ServiceProvider provider = services.BuildServiceProvider();
+                  
                     services.AddNServiceBus("IoT.DeviceListener", configuration =>
                     {
+                        Register<NServiceBusIocModule>(configuration, provider);
                         configuration.UseSerialization<NewtonsoftSerializer>();
                         configuration.EnableInstallers();
-
-                        #region DI NServiceBus
-                        configuration.RegisterComponents(conponents =>
-                        {
-                            conponents.ConfigureComponent(componentFactory: () =>
-                            {
-                                return new TemperatureHandler(repositoryService);
-                            },
-                            dependencyLifecycle: DependencyLifecycle.InstancePerCall);
-                            conponents.ConfigureComponent(componentFactory: () =>
-                            {
-                                return new DevaceMessageResponseHandler(repositoryService);
-                            },
-                            dependencyLifecycle: DependencyLifecycle.InstancePerCall);
-                            conponents.ConfigureComponent(componentFactory: () =>
-                            {
-                                return new SoilmoistureHandler(repositoryService);
-                            },
-                           dependencyLifecycle: DependencyLifecycle.InstancePerCall);
-                           conponents.ConfigureComponent(componentFactory: () =>
-                            {
-                                return new StatusUpdateHandler(repositoryService);
-                            },
-                           dependencyLifecycle: DependencyLifecycle.InstancePerCall);
-                            conponents.ConfigureComponent(componentFactory: () =>
-                            {
-                                return new LedHandller(repositoryService);
-                            },
-                          dependencyLifecycle: DependencyLifecycle.InstancePerCall);
-
-
-                        });
-                        #endregion
-
+                      
                         var transport = configuration.UseTransport<RabbitMQTransport>();
                         configuration.UseTransport<RabbitMQTransport>();
 
@@ -96,6 +76,10 @@ namespace IoT.DevaceListener
         private static void Register<T>(IServiceCollection services, IConfiguration configuration) where T : IMongoDbModule, new()
         {
             new T().Register(services, configuration);
+        }
+        private static void Register<T>(EndpointConfiguration configuration, ServiceProvider provider) where T : INServiceBusIocModule, new()
+        {
+            new T().Register(configuration, provider);
         }
     }
 }

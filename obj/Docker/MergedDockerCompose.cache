@@ -1,7 +1,7 @@
 services:
   iot.deviceenactor:
     build:
-      context: C:\Users\Holden\source\repos\IoT
+      context: D:\GitHub\IoT
       dockerfile: ./IoT.DeviceEnactor/Dockerfile
     depends_on:
     - iot.mqtt.broker
@@ -9,7 +9,7 @@ services:
     image: iotdevaceenactor
   iot.devicelistener:
     build:
-      context: C:\Users\Holden\source\repos\IoT
+      context: D:\GitHub\IoT
       dockerfile: ./IoT.DeviceListener/Dockerfile
     depends_on:
     - iot.mqtt.broker
@@ -18,7 +18,7 @@ services:
     image: iotdevacelistener
   iot.mqtt.broker:
     build:
-      context: C:\Users\Holden\source\repos\IoT
+      context: D:\GitHub\IoT
       dockerfile: ./IoT.Mqtt.Broker/Dockerfile
     image: iotmqttbroker
     ports:
@@ -26,7 +26,7 @@ services:
       target: 1884
   iot.mvc:
     build:
-      context: C:\Users\Holden\source\repos\IoT
+      context: D:\GitHub\IoT
       dockerfile: ./IoT.Mvc/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -36,7 +36,7 @@ services:
     - C:\Users\Holden\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
   iot.webapi:
     build:
-      context: C:\Users\Holden\source\repos\IoT
+      context: D:\GitHub\IoT
       dockerfile: ./IoT.WebApi/Dockerfile
     depends_on:
     - rabbitmq
@@ -57,7 +57,7 @@ services:
       target: 27017
   proxy:
     build:
-      context: C:\Users\Holden\source\repos\IoT
+      context: D:\GitHub\IoT
       dockerfile: ./Dockerfile
     image: iotproxy
     links:

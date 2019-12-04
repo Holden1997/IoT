@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace IoT.Infrastructure.Configurations
 {
-    public class DevaceAndUserConfig : IEntityTypeConfiguration<DevaceAndUser>
+    public class DeviceAndUserConfig : IEntityTypeConfiguration<DeviceAndUser>
     {
-        public void Configure(EntityTypeBuilder<DevaceAndUser> builder)
+        public void Configure(EntityTypeBuilder<DeviceAndUser> builder)
         {
             builder.HasKey(_ => _.UserId);
 

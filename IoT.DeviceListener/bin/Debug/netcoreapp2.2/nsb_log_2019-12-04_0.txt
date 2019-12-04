@@ -1,0 +1,503 @@
+﻿2019-12-04 16:16:16.657 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 16:16:17.845 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 16:47:53.093 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 16:47:54.857 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 16:58:04.274 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 16:58:05.227 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 17:04:06.960 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 17:04:08.098 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 17:08:30.531 WARN  RabbitMQ.Client.IConnection 'Publish' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-04 17:08:30.531 WARN  RabbitMQ.Client.IConnection 'IoT.DeviceListener MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-04 17:08:30.914 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Attempting to reconnect in 10 seconds.
+2019-12-04 17:08:30.915 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.DeviceListener MessagePump' is now in the armed state
+2019-12-04 17:08:30.922 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '3e6a2343-eeb9-4773-a239-ab190119f768' because of an exception:
+System.IO.IOException: Unable to write data to the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.Write(Byte[] buffer)
+   at RabbitMQ.Client.Impl.SessionBase.Transmit(Command cmd)
+   at RabbitMQ.Client.Impl.ModelBase.BasicPublish(String exchange, String routingKey, Boolean mandatory, IBasicProperties basicProperties, Byte[] body)
+   at NServiceBus.Transport.RabbitMQ.ConfirmsAwareChannel.SendMessage(String address, OutgoingMessage message, IBasicProperties properties) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ConfirmsAwareChannel.cs:line 66
+   at NServiceBus.Transport.RabbitMQ.MessageDispatcher.SendMessage(UnicastTransportOperation transportOperation, ConfirmsAwareChannel channel) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Sending\MessageDispatcher.cs:line 55
+   at NServiceBus.Transport.RabbitMQ.MessageDispatcher.Dispatch(TransportOperations outgoingMessages, TransportTransaction transaction, ContextBag context) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Sending\MessageDispatcher.cs:line 27
+   at NServiceBus.ForkExtensions.Fork[TFromContext,TToContext,TForkContext](IForkConnector`3 forkConnector, TForkContext context) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\ForkExtensions.cs:line 13
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 17:08:36.819 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '3e6a2343-eeb9-4773-a239-ab190119f768' because of an exception:
+RabbitMQ.Client.Exceptions.AlreadyClosedException: Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   at RabbitMQ.Client.Framing.Impl.Connection.EnsureIsOpen()
+   at RabbitMQ.Client.Framing.Impl.Connection.CreateModel()
+   at NServiceBus.Transport.RabbitMQ.ConfirmsAwareChannel..ctor(IConnection connection, IRoutingTopology routingTopology, Boolean usePublisherConfirms) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ConfirmsAwareChannel.cs:line 15
+   at NServiceBus.Transport.RabbitMQ.ChannelProvider.GetPublishChannel() in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ChannelProvider.cs:line 66
+   at NServiceBus.Transport.RabbitMQ.MessageDispatcher.Dispatch(TransportOperations outgoingMessages, TransportTransaction transaction, ContextBag context) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Sending\MessageDispatcher.cs:line 18
+   at NServiceBus.ForkExtensions.Fork[TFromContext,TToContext,TForkContext](IForkConnector`3 forkConnector, TForkContext context) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\ForkExtensions.cs:line 13
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 17:08:41.325 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '3e6a2343-eeb9-4773-a239-ab190119f768' because of an exception:
+RabbitMQ.Client.Exceptions.AlreadyClosedException: Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   at RabbitMQ.Client.Framing.Impl.Connection.EnsureIsOpen()
+   at RabbitMQ.Client.Framing.Impl.Connection.CreateModel()
+   at NServiceBus.Transport.RabbitMQ.ConfirmsAwareChannel..ctor(IConnection connection, IRoutingTopology routingTopology, Boolean usePublisherConfirms) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ConfirmsAwareChannel.cs:line 15
+   at NServiceBus.Transport.RabbitMQ.ChannelProvider.GetPublishChannel() in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ChannelProvider.cs:line 66
+   at NServiceBus.Transport.RabbitMQ.MessageDispatcher.Dispatch(TransportOperations outgoingMessages, TransportTransaction transaction, ContextBag context) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Sending\MessageDispatcher.cs:line 18
+   at NServiceBus.ForkExtensions.Fork[TFromContext,TToContext,TForkContext](IForkConnector`3 forkConnector, TForkContext context) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\ForkExtensions.cs:line 13
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 17:08:46.484 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '3e6a2343-eeb9-4773-a239-ab190119f768' because of an exception:
+RabbitMQ.Client.Exceptions.AlreadyClosedException: Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   at RabbitMQ.Client.Framing.Impl.Connection.EnsureIsOpen()
+   at RabbitMQ.Client.Framing.Impl.Connection.CreateModel()
+   at NServiceBus.Transport.RabbitMQ.ConfirmsAwareChannel..ctor(IConnection connection, IRoutingTopology routingTopology, Boolean usePublisherConfirms) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ConfirmsAwareChannel.cs:line 15
+   at NServiceBus.Transport.RabbitMQ.ChannelProvider.GetPublishChannel() in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ChannelProvider.cs:line 66
+   at NServiceBus.Transport.RabbitMQ.MessageDispatcher.Dispatch(TransportOperations outgoingMessages, TransportTransaction transaction, ContextBag context) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Sending\MessageDispatcher.cs:line 18
+   at NServiceBus.ForkExtensions.Fork[TFromContext,TToContext,TForkContext](IForkConnector`3 forkConnector, TForkContext context) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\ForkExtensions.cs:line 13
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 17:08:52.187 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '3e6a2343-eeb9-4773-a239-ab190119f768' because of an exception:
+RabbitMQ.Client.Exceptions.AlreadyClosedException: Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   at RabbitMQ.Client.Framing.Impl.Connection.EnsureIsOpen()
+   at RabbitMQ.Client.Framing.Impl.Connection.CreateModel()
+   at NServiceBus.Transport.RabbitMQ.ConfirmsAwareChannel..ctor(IConnection connection, IRoutingTopology routingTopology, Boolean usePublisherConfirms) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ConfirmsAwareChannel.cs:line 15
+   at NServiceBus.Transport.RabbitMQ.ChannelProvider.GetPublishChannel() in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ChannelProvider.cs:line 66
+   at NServiceBus.Transport.RabbitMQ.MessageDispatcher.Dispatch(TransportOperations outgoingMessages, TransportTransaction transaction, ContextBag context) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Sending\MessageDispatcher.cs:line 18
+   at NServiceBus.ForkExtensions.Fork[TFromContext,TToContext,TForkContext](IForkConnector`3 forkConnector, TForkContext context) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\ForkExtensions.cs:line 13
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 17:08:56.503 WARN  NServiceBus.RecoverabilityExecutor Delayed Retry will reschedule message '3e6a2343-eeb9-4773-a239-ab190119f768' after a delay of 00:00:10 because of an exception:
+RabbitMQ.Client.Exceptions.AlreadyClosedException: Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   at RabbitMQ.Client.Framing.Impl.Connection.EnsureIsOpen()
+   at RabbitMQ.Client.Framing.Impl.Connection.CreateModel()
+   at NServiceBus.Transport.RabbitMQ.ConfirmsAwareChannel..ctor(IConnection connection, IRoutingTopology routingTopology, Boolean usePublisherConfirms) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ConfirmsAwareChannel.cs:line 15
+   at NServiceBus.Transport.RabbitMQ.ChannelProvider.GetPublishChannel() in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ChannelProvider.cs:line 66
+   at NServiceBus.Transport.RabbitMQ.MessageDispatcher.Dispatch(TransportOperations outgoingMessages, TransportTransaction transaction, ContextBag context) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Sending\MessageDispatcher.cs:line 18
+   at NServiceBus.ForkExtensions.Fork[TFromContext,TToContext,TForkContext](IForkConnector`3 forkConnector, TForkContext context) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\ForkExtensions.cs:line 13
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 17:09:01.576 FATAL NServiceBus Failed to execute recoverability policy for message with native ID: `3e6a2343-eeb9-4773-a239-ab190119f768`
+RabbitMQ.Client.Exceptions.AlreadyClosedException: Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   at RabbitMQ.Client.Framing.Impl.Connection.EnsureIsOpen()
+   at RabbitMQ.Client.Framing.Impl.Connection.CreateModel()
+   at NServiceBus.Transport.RabbitMQ.ConfirmsAwareChannel..ctor(IConnection connection, IRoutingTopology routingTopology, Boolean usePublisherConfirms) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ConfirmsAwareChannel.cs:line 15
+   at NServiceBus.Transport.RabbitMQ.ChannelProvider.GetPublishChannel() in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ChannelProvider.cs:line 66
+   at NServiceBus.Transport.RabbitMQ.MessageDispatcher.Dispatch(TransportOperations outgoingMessages, TransportTransaction transaction, ContextBag context) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Sending\MessageDispatcher.cs:line 18
+   at NServiceBus.DelayedRetryExecutor.Retry(IncomingMessage message, TimeSpan delay, TransportTransaction transportTransaction) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Recoverability\DelayedRetryExecutor.cs:line 51
+   at NServiceBus.RecoverabilityExecutor.DeferMessage(DelayedRetry action, ErrorContext errorContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Recoverability\RecoverabilityExecutor.cs:line 99
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 263
+2019-12-04 17:09:08.999 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Connection to the broker reestablished successfully.
+2019-12-04 17:09:09.055 INFO  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.DeviceListener MessagePump' is now disarmed
+2019-12-04 18:22:02.921 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 18:22:04.858 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 18:41:52.932 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 18:41:56.259 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 19:33:07.953 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 19:33:08.963 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 20:27:29.170 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:27:29.821 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 20:35:31.406 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:35:32.274 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 20:37:22.631 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:37:23.266 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 21:13:00.101 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 21:13:00.859 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 21:13:58.154 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '69ccc2f4-26f2-49d1-a068-ab19015418bc' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.TemperatureHandler.Handle(TemperatureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\TemperatureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 40
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 62
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateTransportMessage\MutateIncomingTransportMessageBehavior.cs:line 59
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:13:58.154 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '1d44605a-ff85-4297-8367-ab19015419f9' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.SoilmoistureHandler.Handle(SoilmoistureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\SoilmoistureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:14:31.492 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '69ccc2f4-26f2-49d1-a068-ab19015418bc' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.TemperatureHandler.Handle(TemperatureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\TemperatureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:14:59.434 WARN  RabbitMQ.Client.IConnection 'IoT.DeviceListener MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-04 21:15:00.600 WARN  RabbitMQ.Client.IConnection 'Publish' connection shutdown: AMQP close-reason, initiated by Library, code=0, text='End of stream', classId=0, methodId=0, cause=System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-04 21:15:02.481 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.DeviceListener MessagePump' is now in the armed state
+2019-12-04 21:15:15.312 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Attempting to reconnect in 10 seconds.
+2019-12-04 21:15:18.389 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '69ccc2f4-26f2-49d1-a068-ab19015418bc' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.TemperatureHandler.Handle(TemperatureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\TemperatureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:16:45.880 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 21:16:46.584 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 21:17:29.104 WARN  RabbitMQ.Client.IConnection 'IoT.DeviceListener MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-04 21:17:29.106 WARN  RabbitMQ.Client.IConnection 'Publish' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-04 21:17:36.190 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.DeviceListener MessagePump' is now in the armed state
+2019-12-04 21:18:04.597 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '69ccc2f4-26f2-49d1-a068-ab19015418bc' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.TemperatureHandler.Handle(TemperatureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\TemperatureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.MutateIncomingMessageBehavior.InvokeIncomingMessageMutators(IIncomingLogicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateInstanceMessage\MutateIncomingMessageBehavior.cs:line 60
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 40
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 62
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateTransportMessage\MutateIncomingTransportMessageBehavior.cs:line 59
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:18:04.599 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '1d44605a-ff85-4297-8367-ab19015419f9' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.SoilmoistureHandler.Handle(SoilmoistureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\SoilmoistureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.MutateIncomingMessageBehavior.InvokeIncomingMessageMutators(IIncomingLogicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateInstanceMessage\MutateIncomingMessageBehavior.cs:line 60
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 40
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 62
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateTransportMessage\MutateIncomingTransportMessageBehavior.cs:line 59
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:18:04.757 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Attempting to reconnect in 10 seconds.
+2019-12-04 21:18:54.218 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '69ccc2f4-26f2-49d1-a068-ab19015418bc' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.TemperatureHandler.Handle(TemperatureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\TemperatureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:18:54.218 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '1d44605a-ff85-4297-8367-ab19015419f9' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.SoilmoistureHandler.Handle(SoilmoistureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\SoilmoistureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:21:49.310 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 21:21:50.253 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+
+2019-12-04 21:22:34.151 WARN  RabbitMQ.Client.IConnection 'IoT.DeviceListener MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-04 21:22:34.151 WARN  RabbitMQ.Client.IConnection 'Publish' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-04 21:22:38.885 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.DeviceListener MessagePump' is now in the armed state
+2019-12-04 21:23:08.215 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '69ccc2f4-26f2-49d1-a068-ab19015418bc' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.TemperatureHandler.Handle(TemperatureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\TemperatureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.MutateIncomingMessageBehavior.InvokeIncomingMessageMutators(IIncomingLogicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateInstanceMessage\MutateIncomingMessageBehavior.cs:line 60
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 40
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 62
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateTransportMessage\MutateIncomingTransportMessageBehavior.cs:line 59
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:23:08.217 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '1d44605a-ff85-4297-8367-ab19015419f9' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.SoilmoistureHandler.Handle(SoilmoistureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\SoilmoistureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.MutateIncomingMessageBehavior.InvokeIncomingMessageMutators(IIncomingLogicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateInstanceMessage\MutateIncomingMessageBehavior.cs:line 60
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 40
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 62
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateTransportMessage\MutateIncomingTransportMessageBehavior.cs:line 59
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:23:08.387 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Attempting to reconnect in 10 seconds.
+2019-12-04 21:23:54.053 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Connection to the broker reestablished successfully.
+2019-12-04 21:23:55.831 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '1d44605a-ff85-4297-8367-ab19015419f9' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.SoilmoistureHandler.Handle(SoilmoistureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\SoilmoistureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:24:44.114 WARN  RabbitMQ.Client.IConnection 'Publish' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-04 21:24:44.689 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'IoT.DeviceListener MessagePump' will now be triggered
+2019-12-04 21:24:45.330 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '69ccc2f4-26f2-49d1-a068-ab19015418bc' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.TemperatureHandler.Handle(TemperatureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\TemperatureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:24:45.363 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Attempting to reconnect in 10 seconds.
+2019-12-04 21:24:58.015 FATAL NServiceBus 'IoT.DeviceListener MessagePump' connection to the broker has failed.
+System.Exception: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer. ---> System.Net.Sockets.SocketException: Connection reset by peer
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-04 21:25:47.485 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '1d44605a-ff85-4297-8367-ab19015419f9' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.SoilmoistureHandler.Handle(SoilmoistureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\SoilmoistureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:25:57.995 WARN  RabbitMQ.Client.IConnection 'IoT.DeviceListener MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2019-12-04 21:27:21.039 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '1d44605a-ff85-4297-8367-ab19015419f9' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.SoilmoistureHandler.Handle(SoilmoistureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\SoilmoistureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:28:18.915 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '1d44605a-ff85-4297-8367-ab19015419f9' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.SoilmoistureHandler.Handle(SoilmoistureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\SoilmoistureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:28:56.314 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '69ccc2f4-26f2-49d1-a068-ab19015418bc' because of an exception:
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase] ---> MongoDB.Driver.MongoBulkWriteException`1[IoT.Common.Models.Device.Device]: A bulk write operation resulted in one or more errors.
+  db already exists with different case already have: [IoTDeviceDataBase] trying to create [IotDeviceDataBase]
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, UpdateOptions options, Func`3 bulkWriteAsync)
+   at IoT.DevaceListener.Repositories.DeviceRepository.UpdateAsync(Device model) in D:\GitHub\IoT\IoT.DeviceListener\Repositories\DeviceRepository.cs:line 102
+   at IoT.DevaceListener.Handlers.TemperatureHandler.Handle(TemperatureMessageCommand message, IMessageHandlerContext context) in D:\GitHub\IoT\IoT.DeviceListener\Handlers\TemperatureHandler.cs:line 25
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 36
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 253
+2019-12-04 21:32:44.458 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 21:32:45.768 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+

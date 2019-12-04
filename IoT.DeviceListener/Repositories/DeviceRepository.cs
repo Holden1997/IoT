@@ -26,8 +26,7 @@ namespace IoT.DevaceListener.Repositories
         {
             try
             {
-                await _context.Devices.InsertOneAsync(model)
-             .ConfigureAwait(false);
+                await _context.Devices.InsertOneAsync(model);
             }
             catch
             {

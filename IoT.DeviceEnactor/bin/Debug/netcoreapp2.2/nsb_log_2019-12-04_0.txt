@@ -1,0 +1,46 @@
+﻿2019-12-04 16:16:15.435 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 16:16:16.779 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 16:47:49.924 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 16:47:51.322 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 16:57:59.897 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 16:58:02.597 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 17:04:06.949 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 17:04:08.108 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 18:22:01.605 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 18:22:03.736 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 18:41:47.362 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 18:41:49.878 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 19:33:08.542 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 19:33:09.710 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 20:09:05.090 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:09:06.442 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 20:10:30.309 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:10:31.235 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 20:12:30.317 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:12:31.234 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 20:15:29.510 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:15:30.435 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 20:19:41.773 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:19:43.204 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 20:21:13.312 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:21:13.960 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 20:27:15.128 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:27:16.215 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 20:35:22.671 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:35:23.734 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 20:37:14.016 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:37:15.044 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 20:40:34.768 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:40:36.018 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 20:41:45.572 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 20:41:46.818 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 21:12:51.635 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 21:12:52.728 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 21:16:22.301 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 21:16:23.520 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 21:21:44.360 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 21:21:45.451 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 21:30:39.369 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 21:30:40.723 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.
+2019-12-04 21:32:39.113 INFO  Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-12-04 21:32:40.829 INFO  No valid license could be found. Falling back to trial license with start date '2019-12-04'.

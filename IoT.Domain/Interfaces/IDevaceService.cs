@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace IoT.Domain.Interfaces
 {
-   public interface IDevaceService
+    public interface IDeviceService
     {
-        Task<bool> AddDevaceToUser(Guid clientId, Guid serialNumber);
-        Task<IList<Device>> GetAllDevaces(Guid clientId);
+        Task<bool> AddDeviceToUser(Guid clientId, Guid serialNumber);
+        Task<IList<Device>> GetAllDevices(Guid clientId);
     }
 }

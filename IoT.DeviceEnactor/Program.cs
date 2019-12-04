@@ -19,7 +19,7 @@ namespace IoT.DevaceEnactor
 
         static async Task Main(string[] args)
         {
-             await CreateHostBuilder(args).Build().RunAsync();
+            await CreateHostBuilder(args).Build().RunAsync();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -31,7 +31,9 @@ namespace IoT.DevaceEnactor
                 var mqttClient = factory.CreateMqttClient();
                 var options = new MqttClientOptionsBuilder()
                 .WithClientId("Device Enactor")
-                .WithTcpServer("iot.mqtt.broker", 1884).Build();
+                .WithTcpServer("iot.mqtt.broker", 1884)
+                .WithCredentials("DeviceEnactor", "u@'xSQjBM&6~nMEd")
+                .Build();
 
                 mqttClient.ConnectedHandler = new MqttClientConnectedHandlerDelegate(async e =>
                 {
@@ -49,7 +51,7 @@ namespace IoT.DevaceEnactor
                         await mqttClient.ConnectAsync(options, CancellationToken.None);
                     }
                     catch { }
-                    
+
                 });
 
                 services.AddSingleton(mqttClient);

@@ -9,7 +9,7 @@ namespace IoT.DevaceListener.Iterfaces.Repositories
     {
         Task<TDevice> GetAsync(Guid Id);
         Task<IEnumerable<TDevice>> GetListAsync();
-        //Task<ICollection<TDevace>> GetListAsync(int limit, int offset);
+        
         Task<bool> CreateAsync(TDevice devace);
         Task<bool> UpdateAsync(TDevice devace);
         Task<bool> DeleteAsync(Guid id);

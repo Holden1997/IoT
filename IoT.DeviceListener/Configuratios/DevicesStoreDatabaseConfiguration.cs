@@ -11,7 +11,7 @@ namespace IoT.DevaceListener.Configuratios
         public int Port { get; set; }
         public string User { get; set; }
         public string Password { get; set; }
-        public string DevaceCollectionName { get; set; }
+        public string DeviceCollectionName { get; set; }
         public string ConnectionString
         {
             get

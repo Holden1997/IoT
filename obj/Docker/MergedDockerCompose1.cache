@@ -1,0 +1,188 @@
+services:
+  iot.deviceenactor:
+    build:
+      context: D:\GitHub\IoT
+      dockerfile: ./IoT.DeviceEnactor/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: IoT.DeviceEnactor
+      target: base
+    depends_on:
+    - iot.mqtt.broker
+    - rabbitmq
+    entrypoint: tail -f /dev/null
+    environment:
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: iotdevaceenactor:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "bin/Debug/netcoreapp2.2/IoT.DeviceEnactor.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    tty: true
+    volumes:
+    - D:\GitHub\IoT\IoT.DeviceEnactor:/app:rw
+    - C:\Users\Holden\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\Holden\.nuget\packages:/root/.nuget/packages:ro
+  iot.devicelistener:
+    build:
+      context: D:\GitHub\IoT
+      dockerfile: ./IoT.DeviceListener/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: IoT.DeviceListener
+      target: base
+    depends_on:
+    - iot.mqtt.broker
+    - mongo
+    - rabbitmq
+    entrypoint: tail -f /dev/null
+    environment:
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: iotdevacelistener:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "bin/Debug/netcoreapp2.2/IoT.DeviceListener.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    tty: true
+    volumes:
+    - D:\GitHub\IoT\IoT.DeviceListener:/app:rw
+    - C:\Users\Holden\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\Holden\.nuget\packages:/root/.nuget/packages:ro
+  iot.mqtt.broker:
+    build:
+      context: D:\GitHub\IoT
+      dockerfile: ./IoT.Mqtt.Broker/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: IoT.Mqtt.Broker
+      target: base
+    entrypoint: tail -f /dev/null
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: iotmqttbroker:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "bin/Debug/netcoreapp2.2/IoT.Mqtt.Broker.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 1884
+      target: 1884
+    tty: true
+    volumes:
+    - D:\GitHub\IoT\IoT.Mqtt.Broker:/app:rw
+    - C:\Users\Holden\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Holden\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Holden\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\Holden\.nuget\packages:/root/.nuget/packages:ro
+    - D:\GitHub\IoT:/src:rw
+  iot.mvc:
+    build:
+      context: D:\GitHub\IoT
+      dockerfile: ./IoT.Mvc/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: IoT.Mvc
+      target: base
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: iotmvc:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "bin/Debug/netcoreapp2.2/IoT.Mvc.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    tty: true
+    volumes:
+    - D:\GitHub\IoT\IoT.Mvc:/app:rw
+    - C:\Users\Holden\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Holden\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Holden\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\Holden\.nuget\packages:/root/.nuget/packages:ro
+    - D:\GitHub\IoT:/src:rw
+  iot.webapi:
+    build:
+      context: D:\GitHub\IoT
+      dockerfile: ./IoT.WebApi/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: IoT.WebApi
+      target: base
+    depends_on:
+    - rabbitmq
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: iotwebapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "bin/Debug/netcoreapp2.2/IoT.WebApi.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    tty: true
+    volumes:
+    - D:\GitHub\IoT\IoT.WebApi:/app:rw
+    - C:\Users\Holden\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Holden\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Holden\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\Holden\.nuget\packages:/root/.nuget/packages:ro
+    - D:\GitHub\IoT:/src:rw
+  mongo:
+    container_name: mongo
+    environment:
+      MONGO_INITDB_ROOT_PASSWORD: admin
+      MONGO_INITDB_ROOT_USERNAME: root
+    image: mongo
+    ports:
+    - published: 27017
+      target: 27017
+  proxy:
+    build:
+      context: D:\GitHub\IoT
+      dockerfile: ./Dockerfile
+    image: iotproxy
+    links:
+    - iot.mvc
+    - iot.webapi
+    ports:
+    - published: 5000
+      target: 80
+  rabbitmq:
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_VHOST: /
+    image: rabbitmq:3-management
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - /var/lib/rabbitmq:/var/lib/rabbitmq:rw
+version: '3.4'

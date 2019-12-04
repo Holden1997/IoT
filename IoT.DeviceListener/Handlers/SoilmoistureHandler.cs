@@ -1,7 +1,9 @@
 ﻿using IoT.Common.Models.Device;
 using IoT.Common.SharedMessages.Models;
 using IoT.DevaceListener.Interfaces;
+using Microsoft.Extensions.Logging;
 using NServiceBus;
+using System;
 using System.Threading.Tasks;
 
 namespace IoT.DevaceListener.Handlers
@@ -9,9 +11,11 @@ namespace IoT.DevaceListener.Handlers
     public class SoilmoistureHandler : IHandleMessages<SoilmoistureMessageCommand>
     {
         private readonly IRepository<Device> _repository;
-        public SoilmoistureHandler(IRepository<Device> repository)
+        private readonly ILogger _logger;
+        public SoilmoistureHandler(IRepository<Device> repository, ILoggerFactory loggerFactory)
         {
             _repository = repository;
+            _logger = loggerFactory.CreateLogger<SoilmoistureHandler>();
         }
 
         public async Task Handle(SoilmoistureMessageCommand message, IMessageHandlerContext context)
@@ -20,8 +24,10 @@ namespace IoT.DevaceListener.Handlers
             {
                 await _repository.UpdateAsync(message.Soilmoisture);
             }
-            catch
+            catch(Exception e)
             {
+                _logger.LogInformation(e, e.Message);
+
                 throw;
             }
 

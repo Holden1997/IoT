@@ -14,13 +14,18 @@ namespace IoT.Mqtt.Broker
 {
     public class MqttClientDisconnectedHandler : IMqttServerClientDisconnectedHandler
     {
-        public IMqttServer MqttServer { get; set; }
+        private readonly IMqttServer _mqttServer;
+        private readonly ILogger _logger;
+        public MqttClientDisconnectedHandler(IMqttServer mqttServer, ILoggerFactory loggerFactory)
+        {
+            _mqttServer = mqttServer;
+            _logger = loggerFactory.CreateLogger<MqttClientDisconnectedHandler>();
+        }
 
         public async Task HandleClientDisconnectedAsync(MqttServerClientDisconnectedEventArgs eventArgs)
         {
             if (string.IsNullOrEmpty(eventArgs.ClientId))
                 await Task.CompletedTask;
-
 
             var message = new MqttApplicationMessageBuilder()
                 .WithTopic($"disconnected/{eventArgs.ClientId}")
@@ -28,7 +33,9 @@ namespace IoT.Mqtt.Broker
                 .WithExactlyOnceQoS()
                 .Build();
 
-            await MqttServer.PublishAsync(message);
+            await _mqttServer.PublishAsync(message);
+
+            _logger.LogInformation($"Device disconnected - {eventArgs.ClientId}, {eventArgs.DisconnectType} ");
 
             await Task.CompletedTask;
         }

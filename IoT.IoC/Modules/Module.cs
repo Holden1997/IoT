@@ -12,7 +12,7 @@ namespace IoT.IoC.Modules
         {
             services.AddScoped<IExeptionLogger, ExeptionService>();
             services.AddScoped<IAccountService, AccountService>();
-            services.AddScoped<IDevaceService, DevaceService>();
+            services.AddScoped<IDeviceService, DeviceService>();
         
         }
     }

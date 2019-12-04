@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using NServiceBus;
 using System;
 using System.Runtime.ExceptionServices;
@@ -11,22 +12,24 @@ namespace IoT.WebApi.NServiceBus
     {
         readonly SessionAndConfigurationHolder _holder;
         IEndpointInstance _endpoint;
-
-        public NServiceBusHost(SessionAndConfigurationHolder holder)
+        private readonly ILogger _logger;
+        public NServiceBusHost(SessionAndConfigurationHolder holder, ILoggerFactory loggerFactory)
         {
             _holder = holder;
+            _logger = loggerFactory.CreateLogger<NServiceBusHost>();
         }
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             try
             {
-                _endpoint = await Endpoint.Start(_holder.EndpointConfiguration)
-                    .ConfigureAwait(false);
+                _endpoint = await Endpoint.Start(_holder.EndpointConfiguration);
+                _logger.LogInformation("NServiceBus host started");
             }
             catch (Exception e)
             {
                 _holder.StartupException = ExceptionDispatchInfo.Capture(e);
+                _logger.LogError(e, "NServiceBus host error");
                 return;
             }
 
@@ -37,7 +40,8 @@ namespace IoT.WebApi.NServiceBus
         {
             if(_endpoint != null)
             {
-                await _endpoint.Stop().ConfigureAwait(false);
+                await _endpoint.Stop();
+                _logger.LogInformation("NServiceBus host stopped");
             }
 
             _holder.MessageSession = null;

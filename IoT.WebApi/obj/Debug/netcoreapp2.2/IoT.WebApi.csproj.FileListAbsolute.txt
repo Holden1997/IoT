@@ -1,3 +1,6 @@
+D:\GitHub\IoT\IoT.WebApi\bin\Debug\netcoreapp2.2\appsettings.Development.json
+D:\GitHub\IoT\IoT.WebApi\bin\Debug\netcoreapp2.2\appsettings.json
+D:\GitHub\IoT\IoT.WebApi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
 D:\GitHub\IoT\IoT.WebApi\bin\Debug\netcoreapp2.2\IoT.WebApi.deps.json
 D:\GitHub\IoT\IoT.WebApi\bin\Debug\netcoreapp2.2\IoT.WebApi.runtimeconfig.json
 D:\GitHub\IoT\IoT.WebApi\bin\Debug\netcoreapp2.2\IoT.WebApi.runtimeconfig.dev.json
@@ -21,6 +24,3 @@ D:\GitHub\IoT\IoT.WebApi\obj\Debug\netcoreapp2.2\IoT.WebApi.RazorTargetAssemblyI
 D:\GitHub\IoT\IoT.WebApi\obj\Debug\netcoreapp2.2\IoT.WebApi.csproj.CopyComplete
 D:\GitHub\IoT\IoT.WebApi\obj\Debug\netcoreapp2.2\IoT.WebApi.dll
 D:\GitHub\IoT\IoT.WebApi\obj\Debug\netcoreapp2.2\IoT.WebApi.pdb
-D:\GitHub\IoT\IoT.WebApi\bin\Debug\netcoreapp2.2\appsettings.Development.json
-D:\GitHub\IoT\IoT.WebApi\bin\Debug\netcoreapp2.2\appsettings.json
-D:\GitHub\IoT\IoT.WebApi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json

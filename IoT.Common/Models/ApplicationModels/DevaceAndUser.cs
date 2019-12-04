@@ -4,14 +4,14 @@ using System.Text;
 
 namespace IoT.Common.Models.ApplicationModels
 {
-   public class DevaceAndUser
+   public class DeviceAndUser
     {
         public Guid UserId { get; set; }
-        public virtual IList <Device> DevaceId { get; set; }
+        public virtual IList <Device> DeviceId { get; set; }
 
-        public DevaceAndUser()
+        public DeviceAndUser()
         {
-            DevaceId = new List<Device>();
+            DeviceId = new List<Device>();
         }
 
     }

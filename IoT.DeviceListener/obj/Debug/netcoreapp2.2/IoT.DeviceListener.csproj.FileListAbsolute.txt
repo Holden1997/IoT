@@ -11,3 +11,4 @@ D:\GitHub\IoT\IoT.DeviceListener\obj\Debug\netcoreapp2.2\IoT.DeviceListener.Asse
 D:\GitHub\IoT\IoT.DeviceListener\obj\Debug\netcoreapp2.2\IoT.DeviceListener.csproj.CopyComplete
 D:\GitHub\IoT\IoT.DeviceListener\obj\Debug\netcoreapp2.2\IoT.DeviceListener.dll
 D:\GitHub\IoT\IoT.DeviceListener\obj\Debug\netcoreapp2.2\IoT.DeviceListener.pdb
+D:\GitHub\IoT\IoT.DeviceListener\bin\Debug\netcoreapp2.2\appsettings.json

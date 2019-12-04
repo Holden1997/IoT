@@ -2,9 +2,7 @@
 using IoT.Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using System.Linq;
 using IoT.Common.Models.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,11 +19,11 @@ namespace IoT.Infrastructure.Repositories
         public async Task<bool> AddDevaceToUser(Guid userId, Guid serialNumber)
         {
 
-            var model = await _context.DevaceAndUsers.FindAsync(userId);
+            var model = await _context.DeviceAndUsers.FindAsync(userId);
 
-            model.DevaceId.Add(new Device { SirialNumber = serialNumber });
+            model.DeviceId.Add(new Device { SirialNumber = serialNumber });
 
-            _context.DevaceAndUsers.Update(model);
+            _context.DeviceAndUsers.Update(model);
 
             await SaveAsync();
 
@@ -34,33 +32,31 @@ namespace IoT.Infrastructure.Repositories
 
         public async Task<bool> Create(Guid clientId, Guid serialNumber)
         {
-            var listDevaces = new List<Device>();
-            listDevaces.Add(new Device { SirialNumber = serialNumber });
-            var user = new DevaceAndUser { UserId = clientId, DevaceId = listDevaces };
+            var listDevices = new List<Device>();
+            listDevices.Add(new Device { SirialNumber = serialNumber });
+            var user = new DeviceAndUser { UserId = clientId, DeviceId = listDevices };
 
-            await  _context.DevaceAndUsers.AddAsync(user);
+            await  _context.DeviceAndUsers.AddAsync(user);
             await SaveAsync();
 
-
             return true;
-
         }
-
-        public async Task<DevaceAndUser> GetClient(Guid clientId)
+        
+        public async Task<DeviceAndUser> GetClient(Guid clientId)
         {
-            var isExist = IsExist(clientId);
+            var isExist = await IsExist(clientId);
             if (isExist == false)
                 return   null;
 
-           return await _context.DevaceAndUsers.Include(_ => _.DevaceId)
-           .FirstOrDefaultAsync(_ => _.UserId == clientId)
-           .ConfigureAwait(false);
+            return await _context.DeviceAndUsers.Include(_ => _.DeviceId)
+            .FirstOrDefaultAsync(_ => _.UserId == clientId);
         }
         
 
-        private bool IsExist(Guid clientId)
+        private async  Task<bool> IsExist(Guid clientId)
         {
-            var model=  _context.DevaceAndUsers.Find(clientId);
+            var model= await _context.DeviceAndUsers.FindAsync(clientId);
+           
             if (model!=null) return true;
 
             return false;
@@ -69,7 +65,6 @@ namespace IoT.Infrastructure.Repositories
         private async Task SaveAsync()
         {
              await _context.SaveChangesAsync();
-
         }
 
         #region IDisposable Support

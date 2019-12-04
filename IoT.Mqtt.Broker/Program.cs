@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using MQTTnet.AspNetCore;
+using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace IoT.Mqtt.Broker
 {
@@ -15,7 +17,14 @@ namespace IoT.Mqtt.Broker
             WebHost.CreateDefaultBuilder(args)
                 .UseKestrel(options =>
                 {
-                    //options.ListenAnyIP(1884, l => l.UseMqtt());
+                    options.ListenAnyIP(1884, l => l.UseMqtt());
+                })
+                .ConfigureLogging(configureLogging =>
+                {
+                    configureLogging.ClearProviders();
+                    configureLogging.AddConsole();
+                    configureLogging.AddDebug();
+                    configureLogging.SetMinimumLevel(LogLevel.Trace);
                 })
                 .UseStartup<Startup>()
                 .Build();

@@ -27,8 +27,7 @@ namespace IoT.WebApi.Controllers.v1
             SendOptions sendOptions = new SendOptions();
             sendOptions.SetDestination("IoT.DeviceEnactor");
 
-            await _message.Send(command,sendOptions)
-                .ConfigureAwait(false);
+            await _message.Send(command, sendOptions);
 
             return StatusCode(200);
         }

@@ -16,12 +16,12 @@ namespace IoT.Infrastructure.Contexts
         }
         public virtual DbSet<Exeption> Exeptions { get; set; }
         
-        public virtual DbSet<DevaceAndUser> DevaceAndUsers { get; set; }
+        public virtual DbSet<DeviceAndUser> DeviceAndUsers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ExeptionConfig());
             modelBuilder.ApplyConfiguration(new UserConfig());
-            modelBuilder.ApplyConfiguration(new DevaceAndUserConfig());
+            modelBuilder.ApplyConfiguration(new DeviceAndUserConfig());
             
             base.OnModelCreating(modelBuilder);
 

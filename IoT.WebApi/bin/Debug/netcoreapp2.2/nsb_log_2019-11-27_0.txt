@@ -1,0 +1,67 @@
+﻿2019-11-27 18:07:14.705 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 18:07:15.509 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 18:11:46.651 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 18:11:47.488 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 18:17:20.021 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 18:17:20.821 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 18:26:38.346 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 18:26:39.549 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 18:31:27.481 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 18:31:28.803 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 18:46:18.183 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 18:46:19.647 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 18:49:28.445 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 18:49:29.384 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 18:51:42.491 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 18:51:43.537 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 18:55:21.140 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 18:55:22.140 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 19:01:16.673 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 19:01:17.923 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 19:09:07.784 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 19:09:08.653 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 19:13:59.463 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 19:14:00.306 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 19:28:27.960 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 19:28:29.085 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 19:54:16.305 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 19:54:17.070 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 20:19:49.748 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 20:19:50.923 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 20:21:27.088 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 20:21:28.121 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 20:22:53.315 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 20:22:54.852 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 20:26:47.048 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 20:26:47.961 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 20:28:19.314 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 20:30:25.046 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 20:30:26.152 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 20:39:45.505 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 20:39:46.293 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 20:46:32.486 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 20:46:33.067 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
+2019-11-27 21:00:56.234 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.2/' with level Info
+2019-11-27 21:00:57.402 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-11-27'.
+
